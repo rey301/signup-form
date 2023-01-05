@@ -22,7 +22,8 @@ body {
 .header {
     flex: 1 1 300px;
     height: 100%;
-    background-image: url("images/city-timelapse.jpg");
+    background-image: url("images/leaves.jpg");
+    background-size: cover;
     position: relative;
     display: flex;
     flex-direction: column;
