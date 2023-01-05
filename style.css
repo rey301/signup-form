@@ -19,7 +19,7 @@ body {
     font-style: normal;
 }
 
-.section-1 {
+.header {
     flex: 1 1 300px;
     height: 100%;
     background-image: url("images/city-timelapse.jpg");
@@ -48,12 +48,12 @@ body {
     height: 7em;
 }
 
-a,
-.footer {
+.credits > a,
+.credits {
     color: white;
 }
 
-.footer {
+.credits {
     position: absolute;
     bottom: 20px;
     text-align: center;
@@ -61,6 +61,16 @@ a,
     font-size: 0.9em;
 }
 
-.section-2 {
-    flex: 1 1 800px;
+.content {
+    flex: 1 1 750px;
+    padding: 150px 40px;
+}
+
+.description {
+    font-weight: 600;
+}
+
+.description > div:first-child {
+    padding-right: 150px;
+    padding-bottom: 25px;
 }
