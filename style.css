@@ -53,7 +53,7 @@ body {
 
     .credits > a,
     .credits {
-        color: white;
+        color: rgba(255, 255, 255, 0.6);
     }
 
     .credits {
@@ -67,11 +67,32 @@ body {
 /* Content */
 .content {
     flex: 1 1 750px;
-    margin-top: 120px;
+    margin-top: 115px;
 }
 
     .content > *:not(form) {
         padding-left: 40px;
+    }
+
+    .description {
+        font-weight: 500;
+        padding-right: 150px;
+    }
+
+    .description > div:last-child {
+        margin-top: 30px;
+    }
+
+    input,
+    button {
+        font-family: inherit;
+        font-size: 100%;
+
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+
+        appearance: none;
     }
 
     .form-container {
@@ -84,21 +105,62 @@ body {
         margin-bottom: 25px;
     }
 
+        .form-container > div:first-child {
+            font-weight: 450;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 600px;
+        }
+
+            li {
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 300px;
+                margin: 10px 0;
+            }
+
+                label {
+                    font-size: 0.65em;
+                    font-weight: 500;
+                    color: rgb(31, 31, 31);
+                    letter-spacing: 1px;
+                    margin-bottom: 2px;
+                }
+
+                input {
+                    border: 1px solid #e5e7eb;
+                    border-radius: 5px;
+                    width: 250px;
+                    height: 27px;
+                    font-size: 0.8em;
+                    padding: 0 5px;
+                }
+
     button[type="submit"] {
         margin-left: 40px;
+        margin-bottom: 25px;
+        
+        background-color: #596D48;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        padding: 12px 50px;
+        font-size: 0.85em;
+        font-weight: 450;
     }
 
-    .description {
-        font-weight: 600;
+    .content > div:last-child {
+        font-size: 0.9em;
     }
 
-    .description > div:first-child {
-        padding-right: 150px;
-        padding-bottom: 25px;
-    }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+    .content > div:last-child > a {
+        color: #596D48;
+        text-decoration: none;
     }
