@@ -9,6 +9,7 @@ body {
         'Helvetica Neue', sans-serif;
     height: 100%;
     width: 100%;
+    background-color: #f9fafb;
 }
 
 @font-face {
@@ -19,6 +20,7 @@ body {
     font-style: normal;
 }
 
+/* Header */
 .header {
     flex: 1 1 300px;
     height: 100%;
@@ -29,49 +31,74 @@ body {
     flex-direction: column;
 }
 
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.524);
-    height: 15%;
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.524);
+        height: 15%;
 
-    position: relative;
-    top: 150px;
-}
+        position: relative;
+        top: 150px;
+    }
 
-.logo-text {
-    color: white;
-    font: 5em "Norse-Bold", sans-serif;
-}
+    .logo-text {
+        color: white;
+        font: 5em "Norse-Bold", sans-serif;
+    }
 
-.logo-image {
-    height: 7em;
-}
+    .logo-image {
+        height: 7em;
+    }
 
-.credits > a,
-.credits {
-    color: white;
-}
+    .credits > a,
+    .credits {
+        color: white;
+    }
 
-.credits {
-    position: absolute;
-    bottom: 20px;
-    text-align: center;
-    align-self: center;
-    font-size: 0.9em;
-}
+    .credits {
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        align-self: center;
+        font-size: 0.9em;
+    }
 
+/* Content */
 .content {
     flex: 1 1 750px;
-    padding: 150px 40px;
+    margin-top: 120px;
 }
 
-.description {
-    font-weight: 600;
-}
+    .content > *:not(form) {
+        padding-left: 40px;
+    }
 
-.description > div:first-child {
-    padding-right: 150px;
-    padding-bottom: 25px;
-}
+    .form-container {
+        background-color: white;
+        box-shadow: 0 5px 5px #dcddde;
+        padding-left: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+
+    button[type="submit"] {
+        margin-left: 40px;
+    }
+
+    .description {
+        font-weight: 600;
+    }
+
+    .description > div:first-child {
+        padding-right: 150px;
+        padding-bottom: 25px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
