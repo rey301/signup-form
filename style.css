@@ -93,14 +93,13 @@ body {
         box-sizing: border-box;
 
         appearance: none;
+        outline: none;
     }
 
     .form-container {
         background-color: white;
         box-shadow: 0 5px 5px #dcddde;
-        padding-left: 40px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding: 30px 40px;
         margin-top: 50px;
         margin-bottom: 25px;
     }
@@ -143,6 +142,11 @@ body {
                     padding: 0 5px;
                 }
 
+                input:focus {
+                    border: 1px solid rgb(124, 95, 255);
+                    box-shadow: 2px 3px 5px #dcddde;
+                }
+
     button[type="submit"] {
         margin-left: 40px;
         margin-bottom: 25px;
@@ -163,4 +167,5 @@ body {
     .content > div:last-child > a {
         color: #596D48;
         text-decoration: none;
+        font-weight: 550;
     }
