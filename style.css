@@ -23,7 +23,7 @@ body {
 /* Header */
 .header {
     flex: 1 1 300px;
-    height: max(100%, 250px);
+    height: auto;
     background-image: url("images/leaves.jpg");
     background-size: cover;
     position: relative;
@@ -36,10 +36,10 @@ body {
         justify-content: center;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.524);
-        height: 15%;
+        height: 130px;
+        margin-top: 141px;
+        margin-bottom: 200px;
 
-        position: relative;
-        top: 150px;
     }
 
     .logo-text {
@@ -68,6 +68,7 @@ body {
 .content {
     flex: 1 1 750px;
     margin-top: 115px;
+    width: 80%;
 }
 
     .content > *:not(form) {
@@ -115,7 +116,6 @@ body {
             list-style-type: none;
             padding: 0;
             margin: 0;
-            width: 600px;
         }
 
             li {
