@@ -23,7 +23,7 @@ body {
 /* Header */
 .header {
     flex: 1 1 300px;
-    height: 100%;
+    height: max(100%, 250px);
     background-image: url("images/leaves.jpg");
     background-size: cover;
     position: relative;
@@ -133,6 +133,10 @@ body {
                     margin-bottom: 2px;
                 }
 
+                span[aria-label="required"] {
+                    color: red;
+                }
+
                 input {
                     border: 1px solid #e5e7eb;
                     border-radius: 5px;
@@ -142,9 +146,18 @@ body {
                     padding: 0 5px;
                 }
 
-                input:focus {
-                    border: 1px solid rgb(124, 95, 255);
+                input:focus:not(.mismatch) {
+                    border: 1px solid rgb(137, 110, 255);
                     box-shadow: 2px 3px 5px #dcddde;
+                }
+
+                #conf-password.mismatch,
+                input:invalid:not(:placeholder-shown) {
+                    border: 1px solid red;
+                }
+
+                input:valid:not(:placeholder-shown) {
+                    border: 1px solid green;
                 }
 
     button[type="submit"] {
@@ -162,6 +175,7 @@ body {
 
     .content > div:last-child {
         font-size: 0.9em;
+        padding-bottom: 40px;
     }
 
     .content > div:last-child > a {

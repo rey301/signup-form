@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
     <title>Sign-up Form</title>
 </head>
 
@@ -35,28 +36,58 @@
                 <div>Let's do this!</div>
                 <ul>
                     <li>
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" id="last-name">
+                        <label for="first-name">
+                            <span>FIRST NAME</span>
+                            <span aria-label="required">*</span>
+                        </label>
+                        <input type="text" id="first-name" required
+                            pattern="[A-Za-z]+"
+                            minlength="2"
+                            placeholder=" ">
                     </li>
                     <li>
-                        <label for="last-name">LAST NAME</label>
-                        <input type="text" id="last-name">
+                        <label for="last-name">
+                            <span>LAST NAME</span>
+                            <span aria-label="required">*</span>
+                        </label>
+                        <input type="text" id="last-name" required
+                            pattern="[A-Za-z]+"
+                            minlength="2"
+                            placeholder=" ">
                     </li>
                     <li>
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email">
+                        <label for="email">
+                            <span>EMAIL</span>
+                            <span aria-label="required">*</span>
+                        </label>
+                        <input type="email" id="email" required
+                        placeholder=" ">
                     </li>
                     <li>
                         <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" id="phone">
+                        <input type="tel" id="phone"
+                            pattern="\+([0-9]+)"
+                            title="Please include country code"
+                            placeholder=" ">
                     </li>
                     <li>
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password">
+                        <label for="password">
+                            <span>PASSWORD</span>
+                            <span aria-label="required">*</span>
+                        </label>
+                        <input type="password" id="password" required
+                            onkeyup="validatePass()"
+                            minlength="8"
+                            placeholder=" ">
                     </li>
                     <li>
-                        <label for="conf-password">CONFIRM PASSWORD</label>
-                        <input type="password" id="conf-password">
+                        <label for="conf-password">
+                            <span>CONFIRM PASSWORD</span>
+                            <span aria-label="required">*</span>
+                        </label>
+                        <input type="password" id="conf-password" required
+                            onkeyup="validatePass()"
+                            placeholder=" ">
                     </li>
                 </ul>
             </div>
